@@ -1,0 +1,5 @@
+-name: PING
+hosts: web
+tasks: #defines the activities
+  -name: ping the server
+  ansible.builin.ping:
