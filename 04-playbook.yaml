@@ -10,5 +10,5 @@
   tasks: 
     - name: print variable
       ansible.builtin.debug:
-        msg: course is {{ AWS Devops }}, duration is {{ 120hours }}, trainer is {{ pushpa }}
+        msg: "course is {{ AWS Devops }}, duration is {{ 120hours }}, trainer is {{ pushpa }}"
     
