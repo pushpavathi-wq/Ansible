@@ -1,0 +1,15 @@
+- name: task level variables
+  hosts: local
+  connection: local
+
+  vars:
+    COURSE: "Devops"
+
+  tasks:
+    - name: define task level variables
+      vars:
+        COURSE: "AWS Devops"
+      ansible.builtin.debug:
+        msg: "{{ COURSE }}"  
+
+
