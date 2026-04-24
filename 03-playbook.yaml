@@ -1,13 +1,11 @@
-# print information during playbook execution / writing multiple plays in single book
-
-- name: playbook 1
+- name: playbook 1                  
   hosts: local
   connection: local
 
   tasks:
-   -name: task1
-    ansible.builtin.debug:
-      msg: "Hello"
+    - name: task1
+      ansible.builtin.debug:
+        msg: "Hello"
 
 
 - name: playbook 2
@@ -16,6 +14,6 @@
 
 
   tasks:
-   -name: task2
-    ansible.builtin.debug:
-      msg: "Hi"      
+    - name: task2
+      ansible.builtin.debug:
+        msg: "Hi"
