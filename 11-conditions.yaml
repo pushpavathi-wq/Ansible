@@ -6,14 +6,16 @@
     number: 90
 
   tasks: 
-    - name: check and print value greater than 10 
+    - name: check and print value divisible by 2 
       ansible.builtin.debug:
-        msg: "Given number {{ number }} is greater than 10"
-      when: number>10
+        msg: "Given number {{ number }} is divisible by two"
+      #when: number>10
+      when: number % == 0
 
 
-    - name: check and print value less than 10
-      ansible.builtin.debug:
-        msg: " Given number {{ number }} is less than 10"
-      when: number<10
+    #- name: check and print value less than 10
+      #ansible.builtin.debug:
+     #   msg: " Given number {{ number }} is less than 10"
+      #when: number<10
+      #when: number % =
 
