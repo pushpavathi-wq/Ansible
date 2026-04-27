@@ -1,5 +1,5 @@
 - name: file variables
-  hosts: local
+  hosts: localhost
   connection: local
 
 
