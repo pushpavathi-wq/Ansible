@@ -10,12 +10,13 @@
       ansible.builtin.debug:
         msg: "Given number {{ number }} is divisible by two"
       #when: number>10
-      when: number % 2 == 0
+      #when: number % 2 == 0
+      when: number != 90 and number % 2 == 0
 
 
     #- name: check and print value less than 10
       #ansible.builtin.debug:
      #   msg: " Given number {{ number }} is less than 10"
       #when: number<10
-      #when: number % =
+      
 
