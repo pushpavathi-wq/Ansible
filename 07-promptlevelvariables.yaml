@@ -8,7 +8,7 @@
     
   - name: DURATION
     prompt: duration is
-    private: false
+    private: true
 
   tasks: 
     - name: print the info
