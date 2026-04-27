@@ -1,0 +1,21 @@
+- name: file variables
+  hosts: local
+  connection: local
+
+  vars:  #play level variables
+    COURSE: "AWS Devops"
+    DURATION: "120hours"
+    TRAINER: "Pushpa"  
+  
+  vars_files:
+    - course.yaml
+
+
+  tasks: 
+    - name: print the info
+      vars:
+        COURSE: "AWS Devops"
+      ansible.builtin.debug:
+       msg: course is {{ COURSE }}, duration is {{ DURATION }}
+
+    
