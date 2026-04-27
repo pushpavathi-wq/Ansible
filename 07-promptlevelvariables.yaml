@@ -5,9 +5,10 @@
   vars_prompt:
   - name: COURSE
     prompt: course name is
-    private: false
+    
   - name: DURATION
     prompt: duration is
+    private: false
 
   tasks: 
     - name: print the info
