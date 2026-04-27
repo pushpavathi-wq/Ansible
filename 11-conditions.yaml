@@ -1,0 +1,20 @@
+- name: print a value greater than 10
+  hosts: localhost
+  connection: local
+
+  vars:
+    number:90
+
+  tasks: 
+    - name: check and print value greater than 10 
+      ansible.builtin.debug:
+        msg: "Given number {{ number }} is greater than 10"
+      when: number>10
+
+
+    - name: check and print value less than 10
+      ansible.builtin.debug:
+        msg: " Given number {{ number }} is less than 10"
+      when: number<10
+      
+        
