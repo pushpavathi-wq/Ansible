@@ -10,6 +10,11 @@
   vars_files:
     - course.yaml
 
+  vars_prompt:
+    - name: COURSE
+      prompt: course name is
+      private: false
+
 
   tasks: 
     - name: print the info
