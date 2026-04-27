@@ -3,7 +3,7 @@
   connection: local
 
   vars:
-    number:90
+    number=90
 
   tasks: 
     - name: check and print value greater than 10 
@@ -16,5 +16,4 @@
       ansible.builtin.debug:
         msg: " Given number {{ number }} is less than 10"
       when: number<10
-      
-        
+
