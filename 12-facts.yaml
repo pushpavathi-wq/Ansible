@@ -1,6 +1,7 @@
 - name: print facts
-  hosts: localhost
-  connection: local
+  #hosts: localhost
+  #connection: local
+  hosts: web
 
   tasks:
     - name: print the facts
