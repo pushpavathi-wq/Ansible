@@ -1,6 +1,6 @@
 - name: file variables
-  hosts: localhost
-  connection: local
+  hosts: web
+  #connection: local
 
 
   tasks:
