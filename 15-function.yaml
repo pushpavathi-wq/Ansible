@@ -10,5 +10,7 @@
 
 
     - name: convert string to list
+      vars:
+        fruitname: "'mango','banana'"
       ansible.builtin.debug:
-        msg: "selling fruits {{ fruitname | default ('banana','mango')  }}"      
+        msg: "selling fruits: {{ fruitname | split (',') }}"      
