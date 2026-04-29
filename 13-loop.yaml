@@ -1,0 +1,11 @@
+- name: print items
+  hosts: web
+
+  tasks:
+    - name: items
+      ansible.buultin.debug:
+       msg: "Hey {{ item }}"
+
+      loop:
+        - pushpa
+        - prasad 
