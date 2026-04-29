@@ -9,6 +9,6 @@
 
 
 
-- name: convert string to list
-  ansible.builtin.debug:
-    msg: "selling fruits {{ fruitname | default ('banana','mango')  }}"      
+    - name: convert string to list
+      ansible.builtin.debug:
+        msg: "selling fruits {{ fruitname | default ('banana','mango')  }}"      
