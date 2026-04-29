@@ -1,0 +1,18 @@
+- name: shell module vs command module
+  hosts: local
+  connection: local
+
+  tasks:
+    - name: shell module print ls and redirect output
+      ansible.builtin.shell: ls -ltr > /tmp/output.txt
+
+    - name: print ls in command module
+      ansible.builtin.command: ls -ltr
+      register: result 
+      # store output in result variable with the help of register
+
+    - name: print the output and see
+      ansible.builtin.debug:
+        msg: "{{ result }}"   
+        # printing the output stored in result variable 
+        
