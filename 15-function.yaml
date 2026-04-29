@@ -1,4 +1,4 @@
-- name: filters
+- name: undefined variables
   hosts: localhost
   connection: local
 
@@ -6,3 +6,9 @@
     - name: print default variables
       ansible.builtin.debug:
         msg: "Hi {{ pushpa | default ('female') }}"
+
+
+
+- name: convert string to list
+  ansible.builtin.debug:
+    msg: "selling fruits {{ fruitname | default ('banana','mango')  }}        
