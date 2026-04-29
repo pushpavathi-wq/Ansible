@@ -3,7 +3,7 @@
 
   tasks:
     - name: items
-      ansible.buultin.debug:
+      ansible.builtin.debug:
        msg: "Hey {{ item }}"
 
       loop:
