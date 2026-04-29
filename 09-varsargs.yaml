@@ -1,6 +1,9 @@
 - name: file variables
   hosts: web
   #connection: local
+  vars_prompt:
+    - name: COURSE
+      prompt: course name is
 
 
   tasks:
