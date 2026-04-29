@@ -11,16 +11,32 @@
       #  - prasad 
 
 
-- name: loops printing
+#- name: loops printing
+ # hosts: web
+  #become: yes
+
+  #tasks:
+   # - name: install packages
+   #   ansible.builtin.package:
+   #    name: "{{ item }}"
+    #   state: installed
+
+    #  loop:
+     #   - git
+     #   - ansible
+
+
+- name: install packages
   hosts: web
   become: yes
 
   tasks:
     - name: install packages
       ansible.builtin.package:
-       name: "{{ item }}"
-       state: installed
+        name: "{{ item.name }}"
+        state: "{{ item.state }}"
 
       loop:
-        - git
-        - ansible
+        - { name: 'git', state: 'present' }
+        - { name: 'ansible', state: 'absent' }  
+      
