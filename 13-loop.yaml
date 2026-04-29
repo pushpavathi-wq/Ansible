@@ -1,11 +1,26 @@
-- name: print items
+#- name: print items
+ # hosts: web
+
+ # tasks:
+   # - name: items
+   #   ansible.builtin.debug:
+   #    msg: "Hey {{ item }}"
+
+    #  loop:
+      #  - pushpa
+      #  - prasad 
+
+
+- name: loops printing
   hosts: web
+  become: yes
 
   tasks:
-    - name: items
-      ansible.builtin.debug:
-       msg: "Hey {{ item }}"
+    - name: install packages
+      ansible.builtin.packages:
+       name: "{{ item }}"
+       state: installed
 
       loop:
-        - pushpa
-        - prasad 
+        - git
+        - ansible
